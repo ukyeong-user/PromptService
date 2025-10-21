@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
-import Hub from "./features/Main/Hub/Hub.jsx";
-import Archive from "./features/Main/Archive/Archive.jsx";
-import Maker from "./features/Main/Maker/Maker.jsx";
+import HubPage from "./pages/HubPage/HubPage.jsx";
+import ArchivePage from "./pages/ArchivePage/ArchivePage.jsx";
+import MakerPage from "./pages/MakerPage/MakerPage.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -13,15 +13,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Hub />,
+        element: <HubPage />,
       },
       {
         path: "archive",
-        element: <Archive />,
+        element: <ArchivePage />,
       },
       {
         path: "maker",
-        element: <Maker />,
+        element: <MakerPage />,
       },
     ],
   },

@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Head from "./features/Head/Head";
+import Header from "./components/Header/Header";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 export default function App() {
   return (
     <Wrapper>
-      <Head />
+      <Header />
       <main>
         <Outlet />
       </main>
