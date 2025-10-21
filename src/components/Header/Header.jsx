@@ -10,11 +10,11 @@ const HeaderBar = styled.header`
 `;
 
 const HeaderInner = styled.div`
-  height: 6.375rem;
+  padding: 1.44rem 2.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2.25rem;
+  padding: 1.44rem 2.25rem;
   max-width: 120rem;
   margin: 0 auto;
 `;

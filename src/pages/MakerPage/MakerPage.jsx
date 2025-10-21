@@ -1,5 +1,8 @@
 import React from "react";
+import Sidebar from "./Sidebar/Sidebar";
 
-export default function MakerPage() {
-  return <div>MakerPage</div>;
+function MakerPage() {
+  return <Sidebar></Sidebar>;
 }
+
+export default MakerPage;
