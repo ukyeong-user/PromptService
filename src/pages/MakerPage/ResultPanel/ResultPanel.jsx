@@ -46,6 +46,8 @@ const RunButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 18vw;
+  height: auto;
   gap: 0.5rem;
   padding: 0.8rem 1.5rem;
   background: linear-gradient(

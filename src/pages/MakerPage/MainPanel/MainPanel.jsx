@@ -53,7 +53,6 @@ const MakerPanelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  transition: all 0.3s ease;
 
   /* 사이드바 상태에 따른 왼쪽 여백 */
   padding-left: ${(props) => (props.$isSidebarOpen ? "0" : "3vw")};
@@ -116,7 +115,7 @@ const ToggleIcon = styled.img`
 `;
 
 const ContentArea = styled.div`
-  padding: 3vh 6.25vw;
+  padding: 3vh 5vw;
   display: flex;
   flex-direction: column;
   gap: 2vh;

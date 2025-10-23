@@ -26,7 +26,6 @@ const TitleInputWrapper = styled.div`
 `;
 
 const TitleInput = styled.input`
-  width: 100%;
   font-family: "Pretendard Variable", sans-serif;
   font-size: 2.25rem;
   font-weight: 600;
@@ -46,7 +45,7 @@ const TitleInput = styled.input`
 `;
 
 const Underline = styled.div`
-  width: 100%;
+  width: 22.5vw;
   height: 2px;
   background-color: #f2f2f2;
   margin-top: 0.5vh;
