@@ -2,6 +2,17 @@ import styled from "styled-components";
 import GNB from "./GNB";
 import UserMenu from "./UserMenu";
 
+export default function Head() {
+  return (
+    <HeaderBar>
+      <HeaderInner>
+        <GNB />
+        <UserMenu />
+      </HeaderInner>
+    </HeaderBar>
+  );
+}
+
 const HeaderBar = styled.header`
   position: sticky;
   top: 0;
@@ -18,14 +29,3 @@ const HeaderInner = styled.div`
   max-width: 120rem;
   margin: 0 auto;
 `;
-
-export default function Head() {
-  return (
-    <HeaderBar>
-      <HeaderInner>
-        <GNB />
-        <UserMenu />
-      </HeaderInner>
-    </HeaderBar>
-  );
-}

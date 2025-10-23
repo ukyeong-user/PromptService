@@ -4,7 +4,7 @@ import NavItem from "./NavItem";
 const Nav = styled.nav`
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 `;
 
 const items = [

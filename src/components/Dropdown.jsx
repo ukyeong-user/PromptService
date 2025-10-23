@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CaretIcon from "../assets/tabler_caret-down-filled.svg"; // 경로는 맞게 수정해주세요
+import CaretIcon from "../assets/icon/tabler_caret-down-filled.svg"; // 경로는 맞게 수정해주세요
 
 function Dropdown() {
   // DropdownContainer 하나로 합칩니다.
@@ -34,8 +34,7 @@ const DropdownImage = styled.img`
   height: 1.625rem;
 `;
 
-const DropdownText = styled.p`
+const DropdownText = styled.span`
   font-weight: 500;
   font-size: 1.4375rem;
-  margin: 0; /* p 태그의 기본 마진 제거 */
 `;
