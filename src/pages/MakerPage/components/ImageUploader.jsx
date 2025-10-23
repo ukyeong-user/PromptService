@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import ImgUploadButtonImg from "../../../assets/icon/image-upload-button.svg";
 
 function ImageUploader() {
   const fileInputRef = useRef(null);
@@ -20,8 +21,7 @@ function ImageUploader() {
     <UploaderWrapper>
       <Divider />
       <UploadButton onClick={handleClick}>
-        <PlusIcon>+</PlusIcon>
-        <UploadText>이미지를 필요시 추가해 보세요</UploadText>
+        <UploadButtonImg src={ImgUploadButtonImg} />
       </UploadButton>
       <HiddenInput
         ref={fileInputRef}
@@ -44,9 +44,9 @@ const UploaderWrapper = styled.div`
 
 const Divider = styled.div`
   width: 100%;
-  max-width: 697px;
-  height: 1px;
-  background-color: #bcbcbc;
+  max-width: 49.8125rem;
+  height: 0.0625rem;
+  background-color: #e4e4e4;
   margin-bottom: 2vh;
 `;
 
@@ -64,19 +64,8 @@ const UploadButton = styled.button`
   }
 `;
 
-const PlusIcon = styled.span`
-  font-family: "Pretendard Variable", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #001e40;
-  line-height: 1;
-`;
-
-const UploadText = styled.span`
-  font-family: "Pretendard Variable", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 400;
-  color: #bcbcbc;
+const UploadButtonImg = styled.img`
+  width: 100%;
 `;
 
 const HiddenInput = styled.input`
