@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import SearchButtonImg from "../assets/icon/search-icon.svg";
 
 // 조립된 검색창 컴포넌트
 function SearchInput() {
   return (
     <SearchContainer>
-      <SearchButton>🔍</SearchButton>
+      <SearchButton>
+        <SearchButtonIcon src={SearchButtonImg} />
+      </SearchButton>
       <StyledInput />
     </SearchContainer>
   );
@@ -46,4 +49,8 @@ const SearchButton = styled.button`
   cursor: pointer;
   padding: 0;
   font-size: 1.4375rem;
+`;
+
+const SearchButtonIcon = styled.img`
+  width: 100%;
 `;
