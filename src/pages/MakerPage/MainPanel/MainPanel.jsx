@@ -4,7 +4,7 @@ import PromptTitleInput from "../components/PromptTitleInput";
 import PromptEditor from "../components/PromptEditor";
 import ImageUploader from "../components/ImageUploader";
 import ResultPanelOpen from "../../../assets/icon/tabler_chevrons-open.svg";
-import SidePanelClose from "../../../assets/icon/tabler_chevrons-close.svg";
+import SidePanelOpen from "../../../assets/icon/tabler_chevrons-close.svg";
 
 function MainPanel({
   isSidebarOpen,
@@ -20,7 +20,7 @@ function MainPanel({
       {/* 사이드바 토글 버튼 */}
       {!isSidebarOpen && (
         <SidebarOpenButton onClick={onToggleSidebar} aria-label="사이드바 열기">
-          <ToggleIcon src={SidePanelClose} />
+          <ToggleIcon src={SidePanelOpen} />
         </SidebarOpenButton>
       )}
 
