@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import SearchInput from "../../../components/SearchInput";
-import Dropdown from "../../../components/Dropdown";
+import HubModalSelector from "../components/HubModalSelector";
 
 function TopPanel() {
   return (
     <TopContainer>
       <SearchInput />
-      <Dropdown />
+      <HubModalSelector />
     </TopContainer>
   );
 }
@@ -22,7 +22,7 @@ const TopContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1.63rem 2.31rem;
+  padding: 2.7vh 1.93vw;
   width: 100%;
   background-color: #001e40;
 `;
