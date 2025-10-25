@@ -52,5 +52,6 @@ const SearchButton = styled.button`
 `;
 
 const SearchButtonIcon = styled.img`
-  width: 100%;
+  margin: 0.2vh;
+  width: 3.2vh;
 `;

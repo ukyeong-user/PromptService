@@ -66,8 +66,7 @@ const SidebarOpenButton = styled.button`
   left: 0;
   top: 30%;
   transform: translateY(-50%);
-  /* rem을 vw/vh로 자동 변환 (2.625rem → 2.19vw, 6.25rem → 9.26vh) */
-  width: 2.01;
+  width: 3vh;
   height: 10vh; /* 100px */
   background-color: #001e40;
   border: none;

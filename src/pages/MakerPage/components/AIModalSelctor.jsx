@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import DropdownImage from "../../../assets/icon/ai-modal-dropdown.png";
 
 function ModalSelector() {
   const [selectedModel, setSelectedModel] = useState("ChatGPT");
   const [isOpen, setIsOpen] = useState(false);
-  const [count] = useState(5);
 
-  const models = ["ChatGPT", "Claude", "Gemini", "Nanobanana"];
+  const models = ["ChatGPT", "Claude", "Gemini"];
 
   return (
     <SelectorWrapper>
       <SelectorButton onClick={() => setIsOpen(!isOpen)}>
         <ModelInfo>
           <ModelName>{selectedModel}</ModelName>
-          <ModelCount>{count}</ModelCount>
         </ModelInfo>
-        <DropdownIcon>▼</DropdownIcon>
+        <DropdownIcon src={DropdownImage} />
       </SelectorButton>
 
       {isOpen && (
@@ -72,17 +71,9 @@ const ModelName = styled.span`
   letter-spacing: 1.38px;
 `;
 
-const ModelCount = styled.span`
-  font-family: "Pretendard Variable", sans-serif;
-  font-size: 1.44rem;
-  font-weight: 500;
-  color: #848484;
-  letter-spacing: 1.38px;
-`;
-
-const DropdownIcon = styled.span`
-  font-size: 0.75rem;
-  color: #848484;
+const DropdownIcon = styled.img`
+  width: 2vh;
+  margin-top: 1vh;
 `;
 
 const DropdownMenu = styled.div`
