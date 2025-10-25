@@ -1,6 +1,33 @@
 import styled from "styled-components";
 import { useNavigate, useLocation } from "react-router-dom";
 
+export default function NavItem({ to, end, disabled, children }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = end
+    ? location.pathname === to
+    : location.pathname.startsWith(to);
+
+  const handleClick = () => {
+    if (!disabled) {
+      navigate(to);
+    }
+  };
+
+  return (
+    <StyledButton
+      className={[isActive ? "active" : "", disabled ? "disabled" : ""].join(
+        " "
+      )}
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      {children}
+    </StyledButton>
+  );
+}
+
 const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
@@ -28,30 +55,3 @@ const StyledButton = styled.button`
     opacity: 0.5;
   }
 `;
-
-export default function NavItem({ to, end, disabled, children }) {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const isActive = end
-    ? location.pathname === to
-    : location.pathname.startsWith(to);
-
-  const handleClick = () => {
-    if (!disabled) {
-      navigate(to);
-    }
-  };
-
-  return (
-    <StyledButton
-      className={[isActive ? "active" : "", disabled ? "disabled" : ""].join(
-        " "
-      )}
-      onClick={handleClick}
-      disabled={disabled}
-    >
-      {children}
-    </StyledButton>
-  );
-}

@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import NavItem from "./NavItem";
 
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
 const items = [
   { to: "/", label: "Hub", end: true },
   { to: "/archive", label: "Archive" },
@@ -24,3 +18,9 @@ export default function GNB() {
     </Nav>
   );
 }
+
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;

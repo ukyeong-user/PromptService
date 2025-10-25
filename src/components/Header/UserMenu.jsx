@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+export default function UserMenu() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  const handleLogout = () => {
+    setIsLoggedIn(!isLoggedIn);
+    // 실제 로그아웃 로직을 여기에 추가
+  };
+
+  return (
+    <LogoutButton onClick={handleLogout}>
+      {isLoggedIn ? "로그아웃" : "로그인"}
+    </LogoutButton>
+  );
+}
+
 const LogoutButton = styled.button`
   display: flex;
   align-items: center;
@@ -17,23 +32,4 @@ const LogoutButton = styled.button`
   color: #00aeff;
   cursor: pointer;
   transition: background-color 0.15s ease;
-
-  &:hover {
-    background: rgba(0, 174, 255, 0.08);
-  }
 `;
-
-export default function UserMenu() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
-  const handleLogout = () => {
-    setIsLoggedIn(!isLoggedIn);
-    // 실제 로그아웃 로직을 여기에 추가할 수 있습니다
-  };
-
-  return (
-    <LogoutButton onClick={handleLogout}>
-      {isLoggedIn ? "로그아웃" : "로그인"}
-    </LogoutButton>
-  );
-}
